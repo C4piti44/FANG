@@ -1,7 +1,7 @@
 import shutil
 from malware import*
 import os
-the_dir = r"E:\the meat"
+the_dir = r'E:\\';
 for dirpath , dirname , filenames in os.walk(r'D:\\'):
         for file in filenames:
             if file.endswith(tuple(ex_list)):
