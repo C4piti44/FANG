@@ -7,9 +7,11 @@ for dirpath , dirname , filenames in os.walk(r'D:\\'):
             full_dir = dirpath+file
             if file.endswith(tuple(ex_list)):
                 try:
-                    shutil.copyfile(full_dir, r'C:\Users\USER\Desktop\beef')
+                    shutil.copy(full_dir, r'C:\Users\USER\Desktop\beef')
                 except FileNotFoundError:
                     pass
+
+
 
 
 
