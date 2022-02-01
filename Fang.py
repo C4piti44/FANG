@@ -5,7 +5,6 @@ from itertools import chain
 from string import ascii_uppercase
 
 #this function returns all of the drivers the computer has.
-#not sure if its working.
 def get_drivers():
     list=[]
     for letter in ascii_uppercase:
