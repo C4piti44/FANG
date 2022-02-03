@@ -30,6 +30,9 @@ drivers = get_drivers()
 des = check(drivers)
 drivers.remove(des)
 
+if not(os.path.exists(des+'the_beef')):
+    os.mkdir(des+'the_beef')
+
 for dirpath, dirname, filenames in chain.from_iterable(os.walk(driver) for driver in drivers):
     for file in filenames:
         if any(file.endswith(extension) for extension in ex_list):
