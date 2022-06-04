@@ -22,5 +22,10 @@ def n12():
             pass
         print(str(place)+"." +headline)
 
+def weather():
+    source = requests.get("https://www.ynet.co.il/weather").text
+    soup = BeautifulSoup(source, 'lxml')
+    id = soup.select_one('div.forcast-tempature-mobile').text
+    print(id)
 
 
