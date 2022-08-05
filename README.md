@@ -1,2 +1,3 @@
 # FANG
-The FANG malware is malware that does something .it is none of your business.
+fang is execute by an Arduino pro.
+Fang has a python script that takes all of the computer information and copying it to a usb.
