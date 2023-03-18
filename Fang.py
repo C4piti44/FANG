@@ -22,7 +22,7 @@ def get_drivers():
     return list
 
 
-# this function returns the place that Fang should copy the files to
+# this function returns the place that Fang copies the files to
 def check(list):
     global the_place
     for driver in list:
