@@ -26,7 +26,7 @@ def get_drivers():
 def check(list):
     global the_place
     for driver in list:
-        if os.path.exists(driver + 'meat.txt'):#I need to change the "meat.txt" to the place that the software stores at
+        if os.path.exists(driver + 'meat.txt'):
             the_place = driver
     return the_place
 
